@@ -7,7 +7,7 @@
   --zx-dark-secondary: #a855f7;
   --zx-dark-medium: rgba(19, 19, 19, 0.3);
   --zx-red: #f43f5e;
-  --zx-amber: ##f59e0b;
+  --zx-amber: #f59e0b;
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   --zx-text-color-white: #e2e8f0;
   --zx-text-color-dark: #051c2c;
@@ -492,4 +492,28 @@ h2.Progres {
   font-size: 1.5rem;
   font-family: var(--zx-font-default);
   font-weight: 700;
+}
+
+.mobile-block {
+  height: 100vh;
+  color: var(--zx-text-color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  padding: 20px;
+}
+.mobile-block h1 {
+  font-family: var(--zx-font-iceberg);
+  font-size: 2.5rem;
+  color: var(--zx-red);
+}
+.mobile-block h3 {
+  font-family: var(--zx-font-iceberg);
+  font-size: 1.5rem;
+  color: var(--zx-amber);
 }

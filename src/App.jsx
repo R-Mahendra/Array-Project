@@ -12,6 +12,8 @@ export default function App() {
   // ============================================================
   const [deleteTaskData, setDeleteTaskData] = useState(null);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   // ============================================================
   // STATE — kategoriList (Array 1D)
   // Daftar kategori yang tersedia untuk task.
@@ -125,6 +127,27 @@ export default function App() {
   // ============================================================
   // RENDER
   // ============================================================
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkDevice();
+
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
+
+  if (isMobile) {
+    return (
+      <div className="mobile-block">
+        <h1 className="mb-0">Akses Ditolak...!</h1>
+        <h3>Aplikasi ini hanya dapat digunakan pada Desktop atau Laptop.</h3>
+      </div>
+    );
+  }
   return (
     <section>
       <div className="container px-5">
