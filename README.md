@@ -16,6 +16,11 @@ Aplikasi To Do List berbasis web yang dibuat menggunakan ReactJS dan ViteJS deng
 
 ## Struktur Data
 
+## Preview
+
+![Home](./ppt/Home.png)
+
+
 ### Array 1 Dimensi
 
 Digunakan untuk menyimpan daftar kategori.
@@ -57,13 +62,13 @@ Keterangan:
 Clone repository:
 
 ```bash
-git clone https://github.com/username/todo-list-app.git
+git clone https://github.com/R-Mahendra/Array-Project.git
 ```
 
 Masuk ke folder project:
 
 ```bash
-cd todo-list-app
+cd Array-Project
 ```
 
 Install dependency:
