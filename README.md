@@ -14,11 +14,11 @@ Aplikasi To Do List berbasis web yang dibuat menggunakan ReactJS dan ViteJS deng
 - Penyimpanan Data dengan Local Storage
 - Responsive User Interface
 
-## Struktur Data
-
 ## Preview
 
 ![Home](./ppt/Home.png)
+## Struktur Data
+
 
 
 ### Array 1 Dimensi
