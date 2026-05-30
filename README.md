@@ -17,9 +17,12 @@ Aplikasi To Do List berbasis web yang dibuat menggunakan ReactJS dan ViteJS deng
 ## Preview
 
 ![Home](./ppt/Home.png)
+
+![Edit Modal](./ppt/edit-modal.png)
+
+![Delete Modal](./ppt/delete-modal.png)
+
 ## Struktur Data
-
-
 
 ### Array 1 Dimensi
 
