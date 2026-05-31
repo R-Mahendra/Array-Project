@@ -171,12 +171,14 @@ export default function App() {
             </h1>
           </div>
           <hr className="line-animation d-block" />
+
           {/* Form untuk menambah task baru */}
           <TaskForm
             kategoriList={kategoriList}
             addKategori={addKategori}
             addTask={addTask}
           />
+
           {/* Daftar task yang belum selesai */}
           <TaskList
             title="In Progress"
@@ -186,6 +188,7 @@ export default function App() {
             setEditTask={setEditTask}
             setDeleteTaskData={setDeleteTaskData}
           />
+
           {/* Daftar task yang sudah selesai */}
           <TaskList
             title="Completed"
