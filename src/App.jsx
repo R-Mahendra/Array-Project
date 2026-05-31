@@ -3,6 +3,7 @@ import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import EditModal from "./components/EditModal";
 import DeleteModal from "./components/DeleteModal";
+import logo from "./assets/zx___logo.png";
 
 export default function App() {
   // ============================================================
@@ -153,12 +154,17 @@ export default function App() {
       <div className="container px-5">
         <div className="row d-flex justify-content-center align-items-center">
           {/* Header Aplikasi */}
-          <div className="col-lg-12">
-            <h1>
-              <span>Zhaenx </span>Apps
+          <div className="col-lg-12 d-flex justify-content-between  align-items-center">
+            <div className="cards">
+              <img src={logo} alt="Logo" className="logo img-fluid logo-animation" />
+            </div>
+
+            <h1 className="mb-0 title-animation">
+              <span>Kelompok </span>5
             </h1>
-            <hr />
           </div>
+
+          <hr className="line-animation d-block" />
 
           {/* Form untuk menambah task baru */}
           <TaskForm kategoriList={kategoriList} addKategori={addKategori} addTask={addTask} />
@@ -167,7 +173,7 @@ export default function App() {
           <TaskList title="In Progress" tasks={belumSelesai} toggleTask={toggleTask} deleteTask={deleteTask} setEditTask={setEditTask} setDeleteTaskData={setDeleteTaskData} />
 
           {/* Daftar task yang sudah selesai */}
-          <TaskList title="Selesai" tasks={selesai} toggleTask={toggleTask} deleteTask={deleteTask} setEditTask={setEditTask} setDeleteTaskData={setDeleteTaskData} />
+          <TaskList title="Completed" tasks={selesai} toggleTask={toggleTask} deleteTask={deleteTask} setEditTask={setEditTask} setDeleteTaskData={setDeleteTaskData} />
 
           {/* Modal edit task */}
           <EditModal editTask={editTask} setEditTask={setEditTask} updateTask={updateTask} kategoriList={kategoriList} />
