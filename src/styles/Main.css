@@ -211,17 +211,17 @@ hr {
 .btn-addTask,
 .btn-addTask:focus {
   color: rgb(255, 255, 255);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  padding: 10px;
-  letter-spacing: 0.03em;
+  padding: 5px;
+  letter-spacing: 0.02em;
   background: linear-gradient(135deg, var(--zx-dark-primary), var(--zx-dark-secondary));
   border-width: medium;
   border-style: none;
   border-color: currentcolor;
   border-image: initial;
-  border-radius: var(--radius);
+  border-radius: 12px;
   white-space: nowrap;
   transition:
     opacity 0.2s,

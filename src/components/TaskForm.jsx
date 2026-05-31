@@ -62,17 +62,17 @@ export default function TaskForm({ kategoriList, addTask }) {
 
           {/* Input nama task */}
           <div className="col-lg-5 d-flex justify-content-center align-items-center mt-3">
-            <input type="text" className="form-control zx--form p-3" placeholder="Task Name" value={namaTask} onChange={(e) => setNamaTask(e.target.value)} />
+            <input type="text" className="form-control zx--form p-2" placeholder="Task Name" value={namaTask} onChange={(e) => setNamaTask(e.target.value)} />
           </div>
 
           {/* Input tanggal deadline */}
-          <div className="col-lg-2 d-flex justify-content-center align-items-center mt-3">
-            <input type="date" className="form-control zx--form p-3" value={tanggal} onChange={(e) => setTanggal(e.target.value)} />
+          <div className="col-lg-2 d-flex justify-content-center align-items-center mt-3 p-0">
+            <input type="date" className="form-control zx--form p-2" value={tanggal} onChange={(e) => setTanggal(e.target.value)} />
           </div>
 
           {/* Pilih kategori dari kategoriList */}
           <div className="col-lg-2 d-flex justify-content-center align-items-center mt-3">
-            <select value={kategori} onChange={(e) => setKategori(e.target.value)} className="form-selects">
+            <select value={kategori} onChange={(e) => setKategori(e.target.value)} className="form-selects p-2">
               {kategoriList.map((item, index) => (
                 <option key={index} value={item}>
                   {item}
@@ -82,8 +82,8 @@ export default function TaskForm({ kategoriList, addTask }) {
           </div>
 
           {/* Pilih level prioritas */}
-          <div className="col-lg-2 d-flex justify-content-center align-items-center mt-3">
-            <select value={priority} onChange={(e) => setPriority(e.target.value)} className="form-selects">
+          <div className="col-lg-2 d-flex justify-content-center align-items-center mt-3 ">
+            <select value={priority} onChange={(e) => setPriority(e.target.value)} className="form-selects py-2 ">
               <option value="Low">🟢 Low</option>
               <option value="Medium">🟡 Medium</option>
               <option value="High">🔴 High</option>

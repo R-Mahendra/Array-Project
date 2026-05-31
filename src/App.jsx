@@ -23,7 +23,9 @@ export default function App() {
   // ============================================================
   const [kategoriList, setKategoriList] = useState(() => {
     const savedKategori = localStorage.getItem("kategoriList");
-    return savedKategori ? JSON.parse(savedKategori) : ["Kuliah", "Kerja", "Pribadi"];
+    return savedKategori
+      ? JSON.parse(savedKategori)
+      : ["Kuliah", "Kerja", "Pribadi"];
   });
 
   // ============================================================
@@ -75,7 +77,9 @@ export default function App() {
   // Setelah update, state editTask direset ke null (menutup modal).
   // ============================================================
   const updateTask = (taskUpdate) => {
-    const updated = tasks.map((task) => (task[0] === taskUpdate[0] ? taskUpdate : task));
+    const updated = tasks.map((task) =>
+      task[0] === taskUpdate[0] ? taskUpdate : task,
+    );
     setTasks(updated);
     setEditTask(null);
   };
@@ -156,30 +160,57 @@ export default function App() {
           {/* Header Aplikasi */}
           <div className="col-lg-12 d-flex justify-content-between  align-items-center">
             <div className="cards">
-              <img src={logo} alt="Logo" className="logo img-fluid logo-animation" />
+              <img
+                src={logo}
+                alt="Logo"
+                className="logo img-fluid logo-animation"
+              />
             </div>
-
             <h1 className="mb-0 title-animation">
               <span>Kelompok </span>5
             </h1>
           </div>
-
           <hr className="line-animation d-block" />
-
           {/* Form untuk menambah task baru */}
-          <TaskForm kategoriList={kategoriList} addKategori={addKategori} addTask={addTask} />
-
+          <TaskForm
+            kategoriList={kategoriList}
+            addKategori={addKategori}
+            addTask={addTask}
+          />
           {/* Daftar task yang belum selesai */}
-          <TaskList title="In Progress" tasks={belumSelesai} toggleTask={toggleTask} deleteTask={deleteTask} setEditTask={setEditTask} setDeleteTaskData={setDeleteTaskData} />
+          <TaskList
+            title="In Progress"
+            tasks={belumSelesai}
+            toggleTask={toggleTask}
+            deleteTask={deleteTask}
+            setEditTask={setEditTask}
+            setDeleteTaskData={setDeleteTaskData}
+          />
 
           {/* Daftar task yang sudah selesai */}
-          <TaskList title="Completed" tasks={selesai} toggleTask={toggleTask} deleteTask={deleteTask} setEditTask={setEditTask} setDeleteTaskData={setDeleteTaskData} />
+          <TaskList
+            title="Completed"
+            tasks={selesai}
+            toggleTask={toggleTask}
+            deleteTask={deleteTask}
+            setEditTask={setEditTask}
+            setDeleteTaskData={setDeleteTaskData}
+          />
 
           {/* Modal edit task */}
-          <EditModal editTask={editTask} setEditTask={setEditTask} updateTask={updateTask} kategoriList={kategoriList} />
+          <EditModal
+            editTask={editTask}
+            setEditTask={setEditTask}
+            updateTask={updateTask}
+            kategoriList={kategoriList}
+          />
 
           {/* Modal konfirmasi hapus task */}
-          <DeleteModal deleteTaskData={deleteTaskData} setDeleteTaskData={setDeleteTaskData} deleteTask={deleteTask} />
+          <DeleteModal
+            deleteTaskData={deleteTaskData}
+            setDeleteTaskData={setDeleteTaskData}
+            deleteTask={deleteTask}
+          />
         </div>
       </div>
     </section>
