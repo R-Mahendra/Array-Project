@@ -186,7 +186,6 @@ export default function App() {
             setEditTask={setEditTask}
             setDeleteTaskData={setDeleteTaskData}
           />
-
           {/* Daftar task yang sudah selesai */}
           <TaskList
             title="Completed"
@@ -196,7 +195,6 @@ export default function App() {
             setEditTask={setEditTask}
             setDeleteTaskData={setDeleteTaskData}
           />
-
           {/* Modal edit task */}
           <EditModal
             editTask={editTask}
@@ -204,7 +202,6 @@ export default function App() {
             updateTask={updateTask}
             kategoriList={kategoriList}
           />
-
           {/* Modal konfirmasi hapus task */}
           <DeleteModal
             deleteTaskData={deleteTaskData}
