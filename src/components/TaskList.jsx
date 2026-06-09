@@ -138,7 +138,7 @@ export default function TaskList({ title, tasks, toggleTask, setEditTask, setDel
                   {/* Kolom 6: Tombol aksi — Done/Undo, Edit, Hapus */}
                   <div className="col-lg-2 d-flex justify-content-center align-items-center">
                     {/* Toggle status selesai */}
-                    <button className={`btn ${task[6] ? "btn-undo" : "btn-done"}`} onClick={() => toggleTask(task[0])}>
+                    <button className={`btn ${task[6] ? "btn-undo me-2" : "btn-done"}`} onClick={() => toggleTask(task[0])}>
                       {task[6] ? (
                         <div className="d-flex justify-content-center align-items-center">
                           <i className="bi bi-arrow-clockwise"></i> Undo
@@ -151,12 +151,17 @@ export default function TaskList({ title, tasks, toggleTask, setEditTask, setDel
                     </button>
 
                     {/* Buka modal edit */}
-                    <button className="btn btn-edit mx-2" onClick={() => setEditTask(task)}>
+                    {/* <button className="btn btn-edit mx-2" onClick={() => setEditTask(task)}>
+                      Edit
+                    </button> */}
+
+                    {/* Buka modal edit */}
+                    <button className={task[6] ? "btn zx-none btn-edit mx-2" : "btn btn-edit mx-2"} onClick={() => setEditTask(task)}>
                       Edit
                     </button>
 
                     {/* Buka modal konfirmasi hapus */}
-                    <button className="btn btn-delete" onClick={() => setDeleteTaskData(task)}>
+                    <button className="btn btn-delete ms-2" onClick={() => setDeleteTaskData(task)}>
                       Hapus
                     </button>
                   </div>

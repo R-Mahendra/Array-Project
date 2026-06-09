@@ -175,7 +175,10 @@ hr {
   width: 100%;
   padding: 0;
 }
-
+.btn.zx-none {
+  display: none;
+  /* opacity: 0; */
+}
 /* Scrollbar */
 .task-scroll::-webkit-scrollbar {
   width: 5px;
