@@ -161,7 +161,7 @@ export default function TaskList({ title, tasks, toggleTask, setEditTask, setDel
                     </button>
 
                     {/* Buka modal konfirmasi hapus */}
-                    <button className="btn btn-delete ms-2" onClick={() => setDeleteTaskData(task)}>
+                    <button className="btn btn-delete" onClick={() => setDeleteTaskData(task)}>
                       Hapus
                     </button>
                   </div>
